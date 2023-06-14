@@ -35,42 +35,6 @@ public class CreateContact {
         return operation;
     }
 
-    //
-//    public CreateContact() {
-//
-//    }
-//
-//    public String getFullname(){
-//        return this.fullName;
-//    }
-//    public void setFullName(String fullName) {
-//        this.fullName = fullName;
-//    }
-//    public String getPhone(){
-//        return this.phone;
-//    }
-//    public void setPhone(String phone) {
-//        this.phone = phone;
-//    }
-//    public String getState(){
-//        return this.state;
-//    }
-//    public void setState(String state) {
-//        this.state = state;
-//    }
-//    public String getCity(){
-//        return this.city;
-//    }
-//    public void setCity(String city) {
-//        this.city = city;
-//    }
-//
-//    public String getZip(){
-//        return this.zip;
-//    }
-//    public void setZip(String zip) {
-//        this.zip = zip;
-//    }
     List<String> AddressBook = new ArrayList<>();
 
     public List<String> addContact() {
@@ -107,13 +71,6 @@ public class CreateContact {
         System.out.println("get full details");
         System.out.println(AddressBook + "Address Book");
 
-//        System.out.println(csr.addContact().iterator());
-//        for (String s : csr.addContact()) {
-//            System.out.println(s);
-//        }
-
-//        System.out.println("Full name : "+ this.fullName+ ", Phone number: "  + this.phone +", State : "+ this.state +", City : "+ this.city  + ", Zip code : "+ this.zip);
-//        return this.fullName  + this.phone + this.state + this.city  + this.zip;
     }
 
     public void editContact(String  original, String replacement) {
@@ -125,20 +82,9 @@ public class CreateContact {
             System.out.println(AddressBook);
         }
         else {
-            System.err.println("Index out of Bounds");
+            System.err.println(original+ " Does not exist in Address Book");
         }
 
-//        if(index >= AddressBook.size() || index < 0){
-//            //index does not exists
-//            System.err.println("Index out of Bounds");
-//
-//        }else{
-//            System.out.println("Pre-Edit -> "+AddressBook.get(index));
-//            AddressBook.set(index, replacement);
-//            System.out.println("Post-Edit -> "+AddressBook.get(index));
-//            System.out.println(AddressBook);
-//            // index exists
-//        }
     }
 
     public void deleteContact(String contactData){
