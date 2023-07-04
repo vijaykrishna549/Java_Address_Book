@@ -11,7 +11,7 @@ public class AddressMain {
         CreateContact cr = new CreateContact();
 
         boolean flag = true;
-
+//This While loop satisfies to add multiple persons to address book
         while (flag) {
             switch (cr.displayOption()) {
                 case 1 -> {
