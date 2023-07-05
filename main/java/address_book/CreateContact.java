@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class CreateContact {
     private String fullName;
@@ -30,7 +31,8 @@ public class CreateContact {
         System.err.println("2. Display Contact");
         System.err.println("3. Edit Contact");
         System.err.println("4. Delete Contact");
-        System.err.println("5. Exit");
+        System.err.println("5. Search Contact");
+        System.err.println("6. Exit");
         System.err.println("Enter your choice");
         int operation = sc.nextInt();
         return operation;
@@ -50,12 +52,7 @@ public class CreateContact {
     public List<String> addContact() {
 //        List<String> AddressBook= new ArrayList<>();
         Scanner sc = new Scanner(System.in);
-
-
-//            System.out.println("Enter your full name");
-//            String fullName = sc.nextLine();
-//            AddressBook.add(fullName);
-
+        
             System.out.println("Enter your Phone");
             String phone = sc.next();
             AddressBook.add(phone);
@@ -83,6 +80,16 @@ public class CreateContact {
         System.out.println("get full details");
         System.out.println(AddressBook + "Address Book");
 
+    }
+    public void searchContact(String name){
+
+        List<String> collectName = AddressBook.stream().filter(fName -> fName.equals(name)).collect(Collectors.toList());
+        if(collectName.size() >0 ){
+            System.out.println( "Searched Item -> "+collectName);
+        }
+        else {
+            System.out.println("No results found ...");
+        }
     }
 
     public void editContact(String  original, String replacement) {
