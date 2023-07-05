@@ -33,7 +33,12 @@ public class AddressMain {
                     String  del = sc.next();
                     cr.deleteContact(del);
                 }
-                case 5 -> flag = false;
+                case 5-> {
+                    System.out.println("Enter name to be searched");
+                    String  name = sc.nextLine();
+                    cr.searchContact(name);
+                }
+                case 6 -> flag = false;
                 default -> System.out.println("Invalid entry");
             }
 
