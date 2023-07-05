@@ -11,10 +11,13 @@ public class AddressMain {
         CreateContact cr = new CreateContact();
 
         boolean flag = true;
-
+//This While loop satisfies to add multiple persons to address book
         while (flag) {
             switch (cr.displayOption()) {
                 case 1 -> {
+                    System.out.println("Enter full name");
+                    String name = sc.nextLine();
+                    cr.checkDuplicateName(name);
                     cr.addContact();
                 }
                 case 2 -> cr.getFullDetails();

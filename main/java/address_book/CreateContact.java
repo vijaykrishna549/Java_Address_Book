@@ -1,6 +1,7 @@
 package address_book;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -35,35 +36,46 @@ public class CreateContact {
         return operation;
     }
 
+    public void checkDuplicateName(String fullName){
+        if(Collections.binarySearch(AddressBook,fullName) > 0){
+            System.out.println("Name already exists");
+            System.exit(0);
+        }
+        else {
+            AddressBook.add(fullName);
+        }
+    }
     List<String> AddressBook = new ArrayList<>();
 
     public List<String> addContact() {
 //        List<String> AddressBook= new ArrayList<>();
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter your full name");
-        String fullName = sc.nextLine();
-        AddressBook.add(fullName);
 
-        System.out.println("Enter your Phone");
-        String phone = sc.next();
-        AddressBook.add(phone);
+//            System.out.println("Enter your full name");
+//            String fullName = sc.nextLine();
+//            AddressBook.add(fullName);
 
-        System.out.println("Enter your State");
-        String state = sc.next();
-        AddressBook.add(state);
+            System.out.println("Enter your Phone");
+            String phone = sc.next();
+            AddressBook.add(phone);
 
-        System.out.println("Enter your City");
-        String city = sc.next();
-        AddressBook.add(city);
+            System.out.println("Enter your State");
+            String state = sc.next();
+            AddressBook.add(state);
 
-        System.out.println("Enter your zip code");
-        String zipCode = sc.next();
-        AddressBook.add(zipCode);
+            System.out.println("Enter your City");
+            String city = sc.next();
+            AddressBook.add(city);
 
-        System.out.println(AddressBook + " adb");
+            System.out.println("Enter your zip code");
+            String zipCode = sc.next();
+            AddressBook.add(zipCode);
 
-        return AddressBook;
+            System.out.println(AddressBook + " adb");
+//        }
+            return AddressBook;
+
 
     }
     public void getFullDetails() {
