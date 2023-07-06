@@ -41,7 +41,10 @@ public class AddressMain {
                 case 6 -> {
                     cr.countContact();
                 }
-                case 7 -> flag = false;
+                case 7 -> {
+                    cr.sortContact();
+                }
+                case 8 -> flag = false;
                 default -> System.out.println("Invalid entry");
             }
 
