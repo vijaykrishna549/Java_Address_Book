@@ -32,7 +32,8 @@ public class CreateContact {
         System.err.println("3. Edit Contact");
         System.err.println("4. Delete Contact");
         System.err.println("5. Search Contact");
-        System.err.println("6. Exit");
+        System.err.println("6. Count Contact");
+        System.err.println("7. Exit");
         System.err.println("Enter your choice");
         int operation = sc.nextInt();
         return operation;
@@ -104,6 +105,9 @@ public class CreateContact {
             System.err.println(original+ " Does not exist in Address Book");
         }
 
+    }
+    public void countContact(){
+        System.out.println("Contact Size is : "+   AddressBook.size());
     }
 
     public void deleteContact(String contactData){
