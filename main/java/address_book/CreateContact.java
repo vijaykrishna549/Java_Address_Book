@@ -112,6 +112,7 @@ public class CreateContact {
         System.out.println("Contact Size is : " + AddressBook.size());
     }
 
+//    Also Satisfies UC12
     public void sortContact() {
         List<String> collect = AddressBook.stream().sorted().collect(Collectors.toList());
         collect.forEach(System.out::println);
