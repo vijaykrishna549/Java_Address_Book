@@ -38,7 +38,10 @@ public class AddressMain {
                     String  name = sc.nextLine();
                     cr.searchContact(name);
                 }
-                case 6 -> flag = false;
+                case 6 -> {
+                    cr.countContact();
+                }
+                case 7 -> flag = false;
                 default -> System.out.println("Invalid entry");
             }
 
